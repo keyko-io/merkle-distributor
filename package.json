@@ -43,7 +43,7 @@
     "compile": "waffle",
     "pretest": "yarn compile",
     "test": "mocha",
-    "deploy-merkle": "npx hardhat run scripts/deploy-merkle-distributor.ts",
+    "deploy-merkle": "npx hardhat run scripts/deploy-merkle-distributor.ts json-data/rewards.json",
     "generate-merkle-root": "ts-node scripts/generate-merkle-root.ts",
     "generate-merkle-root:example": "ts-node scripts/generate-merkle-root.ts --input scripts/example.json",
     "prepublishOnly": "yarn test"

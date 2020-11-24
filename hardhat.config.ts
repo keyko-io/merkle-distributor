@@ -1,4 +1,5 @@
 import "@nomiclabs/hardhat-ethers";
+import "./tasks/deploy-merkle-distributor"
 
 const gasLimit = 13000000
 const DEVELOPMENT_FROM = '0x5409ed021d9299bf6814279a6a1411a7e866a631'
