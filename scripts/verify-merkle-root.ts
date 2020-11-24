@@ -91,7 +91,7 @@ export async function verifyMerkleRoot(merkleData: { [k: string]: any} ) {
     console.error('Failed validation for 1 or more proofs')
     process.exit(1)
   }
-  console.log('Validated Merkle Tree: success!')
+  console.log('Successfully validated all merkle claims')
   
   // Root
   const root = getRoot(balances).toString('hex')

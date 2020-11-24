@@ -22,14 +22,13 @@ async function main(jsonFile: string, hre: any) {
   merkleData.contractAddress = merkleDistributor.address
  }
 
- task('deploy-merkle', 'generates a merkle tree based on rewards and deploys merkle distributor contract')
+ task('deploy-distributor', 'generates a merkle tree based on rewards and deploys merkle distributor contract')
   .addParam('input', 'json file with rewards')
   .setAction(
     async (params, hre) => { 
       await main(params.input, hre)
       .then(() => process.exit(0))
       .catch(error => {
-        console.log('heeeeere')
         console.error(error);
         process.exit(1);
       });

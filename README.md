@@ -18,3 +18,8 @@ The following assumes the use of `node@>=10`.
 ## Run Tests
 
 `yarn test`
+
+## Deploy Merkle Distributor
+
+Start celo node on localhost:8545 then run:
+`npx hardhat deploy-distributor --input <json file with rewards data>`
