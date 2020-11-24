@@ -39,8 +39,8 @@
     "typescript": "^3.7.3"
   },
   "scripts": {
-    "precompile": "rimraf ./build/",
-    "compile": "waffle",
+    "precompile": "rimraf ./artifacts/ ./cache/",
+    "compile": "npx hardhat compile",
     "pretest": "yarn compile",
     "test": "mocha",
     "deploy-merkle": "npx hardhat run scripts/deploy-merkle-distributor.ts json-data/rewards.json",
