@@ -9,8 +9,6 @@ program
     'input JSON file location containing a map of account addresses to string balances'
   )
 
-console.log(process.argv)
-
 program.parse(process.argv)
 
 const json = JSON.parse(fs.readFileSync(program.input, { encoding: 'utf8' }))
