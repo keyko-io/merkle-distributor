@@ -1,18 +1,20 @@
 {
-  "name": "@uniswap/merkle-distributor",
+  "name": "celogive",
   "author": {
-    "name": "Moody Salem"
+    "name": "Celo"
   },
-  "description": "📦 A smart contract that distributes a balance of tokens according to a merkle root",
-  "version": "1.0.1",
-  "homepage": "https://uniswap.org",
+  "description": "📦 Celo rewards CLI that uses a smart contract that distributes a balance of tokens according to a merkle root",
+  "version": "0.0.1",
+  "homepage": "https://celo.org",
+  "bin": { "celogive": "./bin/run"},
   "keywords": [
-    "uniswap",
-    "erc20"
+    "celo",
+    "rewards",
+    "merkle"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Uniswap/merkle-distributor"
+    "url": "https://github.com/celo-org/merkle-distributor"
   },
   "files": [
     "build"
