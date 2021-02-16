@@ -19,7 +19,7 @@
   "files": [
     "/bin/run",
     "/bin/run.cmd",
-    "/cli",
+    "/lib",
     "README.md"
   ],
   "engines": {
@@ -51,6 +51,7 @@
   "scripts": {
     "precompile": "rimraf ./build/",
     "compile": "waffle && cp build/MerkleDistributor.json cli/MerkleDistributor.json",
+    "tsc": "tsc -b .",
     "generate-merkle-root": "ts-node scripts/generate-merkle-root.ts",
     "generate-merkle-root:example": "ts-node scripts/generate-merkle-root.ts --input scripts/example.json"
   },

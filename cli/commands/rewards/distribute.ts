@@ -22,6 +22,7 @@ export default class DeployMerkleDistributor extends BaseCommand {
     const from: string = res.flags.from.toLowerCase()
     const abi = MerkleDistributor.abi 
     const distAddress = res.flags.address
+    // @ts-ignore
     const merkleDistributor = new this.kit.web3.eth.Contract(abi, distAddress)
     const distributorMerkleRoot = await merkleDistributor.methods.merkleRoot().call()
     if (merkleTree.merkleRoot != distributorMerkleRoot) {
