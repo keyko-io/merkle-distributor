@@ -1,10 +1,10 @@
 {
-  "name": "celogive",
+  "name": "@emag3m/celogive",
   "author": {
     "name": "Celo"
   },
   "description": "📦 Celo rewards CLI that uses a smart contract that distributes a balance of tokens according to a merkle root",
-  "version": "0.0.1",
+  "version": "0.0.19",
   "homepage": "https://celo.org",
   "bin": { "celogive": "./bin/run"},
   "keywords": [
@@ -17,40 +17,42 @@
     "url": "https://github.com/celo-org/merkle-distributor"
   },
   "files": [
-    "build"
+    "/bin/run",
+    "/bin/run.cmd",
+    "/cli",
+    "README.md"
   ],
   "engines": {
     "node": ">=10"
   },
-  "devDependencies": {
+  "dependencies": {
+    "cli-ux": "^5.4.9",
+    "@oclif/command": "^1",
+    "typescript": "^3.7.3",
     "@celo/base": "1.0.1",
     "@celo/connect": "1.0.1",
-    "@celo/contractkit": "1.0.1",
+    "@celo/contractkit": "1.0.1"
+  },
+  "devDependencies": {
     "@openzeppelin/contracts": "3.1.0",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "axios": "^0.20.0",
     "chai": "^4.2.0",
-    "cli-ux": "^5.4.9",
     "commander": "^6.1.0",
     "ethereum-waffle": "^3.2.0",
     "ethereumjs-util": "^5.2.0",
     "mocha": "^6.2.2",
-    "@oclif/command": "^1",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.0",
     "solc": "0.6.11",
-    "ts-node": "^8.5.4",
-    "typescript": "^3.7.3"
+    "ts-node": "^8.5.4"
   },
   "scripts": {
     "precompile": "rimraf ./build/",
     "compile": "waffle && cp build/MerkleDistributor.json cli/MerkleDistributor.json",
-    "pretest": "yarn compile",
-    "test": "mocha",
     "generate-merkle-root": "ts-node scripts/generate-merkle-root.ts",
-    "generate-merkle-root:example": "ts-node scripts/generate-merkle-root.ts --input scripts/example.json",
-    "prepublishOnly": "yarn test"
+    "generate-merkle-root:example": "ts-node scripts/generate-merkle-root.ts --input scripts/example.json"
   },
   "oclif": {
     "commands": "cli/commands",
