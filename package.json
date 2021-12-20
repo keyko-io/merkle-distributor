@@ -7,7 +7,9 @@
   "version": "0.0.3",
   "homepage": "https://celo.org",
   "main": "lib/cli/index.js",
-  "bin": { "celogive": "./bin/run"},
+  "bin": {
+    "celogive": "./bin/run"
+  },
   "keywords": [
     "celo",
     "rewards",
@@ -26,17 +28,18 @@
     "node": ">=10"
   },
   "dependencies": {
-    "cli-ux": "^5.4.9",
-    "@oclif/command": "^1",
-    "typescript": "^3.7.3",
     "@celo/base": "1.0.1",
     "@celo/connect": "1.0.1",
     "@celo/contractkit": "1.0.1",
+    "@clabs/celogive": "^0.0.3",
+    "@oclif/command": "^1",
+    "cli-ux": "^5.4.9",
     "ethereum-waffle": "^3.2.0",
-    "ethereumjs-util": "^5.2.0"
+    "ethereumjs-util": "^5.2.0",
+    "typescript": "^3.7.3"
   },
   "devDependencies": {
-    "@openzeppelin/contracts": "3.1.0",
+    "@openzeppelin/contracts": "^4.4.0-rc.0",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "axios": "^0.20.0",
@@ -45,7 +48,7 @@
     "mocha": "^6.2.2",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.0",
-    "solc": "0.6.11",
+    "solc": "^0.8.9",
     "ts-node": "^8.5.4"
   },
   "scripts": {
