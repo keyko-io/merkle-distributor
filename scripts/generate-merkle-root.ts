@@ -11,7 +11,15 @@ program
 
 program.parse(process.argv)
 
-const json = JSON.parse(fs.readFileSync(program.input, { encoding: 'utf8' }))
+const rewardsJson = JSON.parse(fs.readFileSync(program.input, { encoding: 'utf8' }))
 
-if (typeof json !== 'object') throw new Error('Invalid JSON')
-console.log(JSON.stringify(parseBalanceMap(json)))
+if (typeof rewardsJson !== 'object') throw new Error('Invalid JSON')
+
+const merkleFile = 'merkleTree.json'
+const merkleData = parseBalanceMap(rewardsJson)
+console.log(`merkelRoot: ${merkleData.merkleRoot}`)
+
+fs.writeFile(merkleFile, JSON.stringify(merkleData, null, 2), (err) => {
+  if (err) console.error(err)
+})
+console.log(`Merkle Tree data saved to file: ${merkleFile}`)
